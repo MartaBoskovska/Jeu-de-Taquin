@@ -1,4 +1,3 @@
-package src;
 import Model.*;
 import Control.*;
 import View.*;
@@ -25,10 +24,8 @@ import java.util.*;
           monChoix = monObj.nextLine();  // Read user input
 
           if (monChoix.equals("1")) {
-
               System.out.println(" Veuillez choisir votre format de jeu. Combien de lignes souhaitez vous ?");
               String nbLignes = monObj.nextLine();
-
               System.out.println("Combien de colonnes souhaitez vous ?");
               String nbColonnes = monObj.nextLine();
 
@@ -122,5 +119,3 @@ import java.util.*;
         }
   }
 }
-
-

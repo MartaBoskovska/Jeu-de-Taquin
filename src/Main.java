@@ -1,4 +1,3 @@
-package src;
 import Model.*;
 import Control.*;
 import View.*;
@@ -13,20 +12,20 @@ import java.util.*;
 
       Scanner monObj = new Scanner(System.in);
 
-      int monChoix = 1;
+      String monChoix = "0";
 
-      while (!(monChoix == 1 && monChoix == 2 )) {
+      while (!(monChoix.equals("1") && monChoix.equals("2") )) {
 
           // Create a Scanner object
 
           System.out.println("Veuillez choisir la version en ligne de commande (1)");
           System.out.println("ou la version graphique (2)");
 
-          if (monChoix == 1) {
+          monChoix = monObj.nextLine();  // Read user input
 
+          if (monChoix.equals("1")) {
               System.out.println(" Veuillez choisir votre format de jeu. Combien de lignes souhaitez vous ?");
               String nbLignes = monObj.nextLine();
-
               System.out.println("Combien de colonnes souhaitez vous ?");
               String nbColonnes = monObj.nextLine();
 
@@ -99,7 +98,7 @@ import java.util.*;
               }
             }
 
-          else if(monChoix == 2) {
+          else if(monChoix.equals("2")) {
                   
             Board board = new Board(3,3);
             board.removeOneElement(2,2);
@@ -115,9 +114,8 @@ import java.util.*;
             }
           else {
               System.out.println("Saisie incorrecte, veuillez réessayer!");
+              monChoix = monObj.nextLine();
           }
         }
   }
 }
-
-
